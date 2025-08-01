@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patagonia - Experiencias Únicas en el Fin del Mundo</title>
+    <title>Patagonia Diseño Web | Desarrollo Web Profesional</title>
     <style>
         * {
             margin: 0;
@@ -12,23 +12,20 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
         }
 
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(30, 60, 90, 0.9), rgba(15, 30, 50, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23001122"/><polygon points="0,400 300,300 600,450 900,250 1200,400 1200,800 0,800" fill="%23003366" opacity="0.7"/><polygon points="0,500 250,400 500,550 750,350 1000,500 1200,450 1200,800 0,800" fill="%23004488" opacity="0.5"/><circle cx="200" cy="150" r="3" fill="%23ffffff" opacity="0.8"/><circle cx="800" cy="100" r="2" fill="%23ffffff" opacity="0.6"/><circle cx="1000" cy="200" r="2.5" fill="%23ffffff" opacity="0.7"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .hero::before {
@@ -38,236 +35,26 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 70%, rgba(100, 200, 255, 0.1) 0%, transparent 50%);
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,800 1000,1000"/><polygon fill="rgba(255,255,255,0.03)" points="0,800 1000,600 1000,800 0,1000"/></svg>');
+            animation: float 6s ease-in-out infinite;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1.2s ease-out;
-            position: relative;
-            z-index: 2;
-        }
-
-        .logo {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            letter-spacing: 3px;
-        }
-
-        .welcome-text {
-            font-size: 1.8rem;
-            color: #e0f0ff;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #b0d0ff;
-            margin-bottom: 3rem;
-            font-weight: 400;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, #00aaff, #0088cc);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(0, 170, 255, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0, 170, 255, 0.4);
-            background: linear-gradient(135deg, #0099ee, #0077bb);
-        }
-
-        .benefits-section {
-            padding: 100px 2rem;
-            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
-        .section-title {
+        .hero-content {
             text-align: center;
-            font-size: 3rem;
-            color: #1a4a6b;
-            margin-bottom: 4rem;
-            font-weight: 700;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 170, 255, 0.1);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00aaff, #0088cc);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .benefit-title {
-            font-size: 1.5rem;
-            color: #1a4a6b;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .benefit-description {
-            color: #666;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        .features-section {
-            padding: 100px 2rem;
-            background: linear-gradient(135deg, #1a4a6b 0%, #2d5a7b 100%);
-            color: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .feature-item {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: scale(1.05);
-        }
-
-        .feature-item h3 {
-            color: #64d0ff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .stats-section {
-            padding: 80px 2rem;
-            background: #f0f8ff;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 2rem 1rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #00aaff;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .floating-elements {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            width: 20px;
-            height: 20px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            width: 15px;
-            height: 15px;
-            top: 60%;
-            right: 20%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            width: 25px;
-            height: 25px;
-            bottom: 30%;
-            left: 80%;
-            animation-delay: 4s;
+            animation: fadeInUp 1s ease-out;
         }
 
         @keyframes fadeInUp {
@@ -281,476 +68,511 @@
             }
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(90deg); }
-            50% { transform: translateY(-10px) rotate(180deg); }
-            75% { transform: translateY(-30px) rotate(270deg); }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .contact-section {
-            padding: 100px 2rem;
-            background: linear-gradient(135deg, #0f2744 0%, #1a4a6b 50%, #2d5a7b 100%);
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #ff6b6b;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .benefits-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: scale(1.05);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .income-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
 
-        .contact-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        .income-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .income-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .income-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .income-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
         }
 
         .contact-form {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 25px;
+            text-align: left;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: #e0f0ff;
-            font-weight: 500;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
 
         .form-group input,
-        .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px 16px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border: none;
             border-radius: 10px;
+            font-size: 16px;
+            background: rgba(255,255,255,0.1);
             color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #00aaff;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.2);
-        }
-
-        .checkbox-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.8rem;
-            margin-top: 0.5rem;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        .checkbox-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 8px;
-            transform: scale(1.2);
+            color: rgba(255,255,255,0.7);
         }
 
         .submit-btn {
-            width: 100%;
-            padding: 16px 24px;
-            background: linear-gradient(135deg, #00aaff, #0088cc);
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
             color: white;
+            padding: 15px 40px;
             border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 1rem;
-            box-shadow: 0 8px 30px rgba(0, 170, 255, 0.3);
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 170, 255, 0.4);
-            background: linear-gradient(135deg, #0099ee, #0077bb);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
         }
 
-        .btn-icon {
-            font-size: 1.2rem;
-        }
-
-        .privacy-text {
-            font-size: 0.85rem;
-            color: #b0d0ff;
-            text-align: center;
-            margin-top: 1rem;
-            line-height: 1.4;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            padding: 15px 0;
             transition: all 0.3s ease;
         }
 
-        .info-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
-        .info-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .info-card h4 {
-            color: #64d0ff;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
         }
 
-        .info-card p {
-            color: #e0f0ff;
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b6b;
         }
 
         @media (max-width: 768px) {
-            .logo {
+            .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .welcome-text {
-                font-size: 1.4rem;
+            .nav-links {
+                display: none;
             }
             
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .benefits-grid {
+            .services-grid,
+            .benefits-grid,
+            .income-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .checkbox-group {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">🏔️ Patagonia Web</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#ingresos">Ingresos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </div>
-        
-        <div class="hero-content">
-            <h1 class="logo">PATAGONIA</h1>
-            <p class="welcome-text">¡Bienvenidos al Fin del Mundo!</p>
-            <p class="subtitle">Descubre paisajes únicos, aventuras inolvidables y experiencias que cambiarán tu vida</p>
-            <a href="#ingreso" class="cta-button">Ingreso Web</a>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>PATAGONIA DISEÑO WEB</h1>
+                <p class="subtitle">Desarrollo Web Profesional desde el fin del mundo</p>
+                <p>Creamos experiencias digitales únicas que conectan tu negocio con el mundo</p>
+                <br>
+                <a href="#contacto" class="cta-button">Comenzar Proyecto</a>
+            </div>
         </div>
     </section>
 
-    <section class="benefits-section">
+    <section id="servicios" class="section">
         <div class="container">
-            <h2 class="section-title">¿Por Qué Elegir Patagonia?</h2>
-            
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Diseño Web Personalizado</h3>
+                    <p>Creamos diseños únicos que reflejan la identidad de tu marca, optimizados para conversión y experiencia de usuario excepcional.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Desarrollo Frontend</h3>
+                    <p>Interfaces modernas y responsivas usando las últimas tecnologías: React, Vue.js, y optimización para dispositivos móviles.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Aplicaciones Web</h3>
+                    <p>Desarrollo de aplicaciones web completas con funcionalidades avanzadas, integración de APIs y bases de datos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Sitios que se adaptan perfectamente a todos los dispositivos: móviles, tablets y computadoras de escritorio.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>SEO & Posicionamiento</h3>
+                    <p>Optimización para motores de búsqueda que aumenta tu visibilidad online y atrae más clientes potenciales.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Mantenimiento Web</h3>
+                    <p>Soporte técnico continuo, actualizaciones de seguridad y mejoras de rendimiento para tu sitio web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="section benefits-section">
+        <div class="container">
+            <h2 class="section-title">Beneficios de Trabajar con Nosotros</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏔️</div>
-                    <h3 class="benefit-title">Paisajes Únicos</h3>
-                    <p class="benefit-description">Glaciares milenarios, montañas imponentes y lagos cristalinos que te dejarán sin aliento. Cada rincón de la Patagonia es una postal natural.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Calidad Premium</h3>
+                    <p>Código limpio, diseños profesionales y las mejores prácticas de la industria en cada proyecto.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">🗺️</div>
-                    <h3 class="benefit-title">Aventuras Personalizadas</h3>
-                    <p class="benefit-description">Desde trekking suave hasta expediciones extremas. Diseñamos cada experiencia según tus intereses y nivel de aventura.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏰</div>
+                    <h3>Entrega Puntual</h3>
+                    <p>Cumplimos los plazos establecidos sin comprometer la calidad del trabajo final.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌟</div>
-                    <h3 class="benefit-title">Experiencias Auténticas</h3>
-                    <p class="benefit-description">Conecta con la cultura local, la gastronomía regional y la historia única de esta tierra del fin del mundo.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Comunicación Constante</h3>
+                    <p>Te mantenemos informado en cada etapa del proyecto con reportes y actualizaciones regulares.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏕️</div>
-                    <h3 class="benefit-title">Alojamientos Premium</h3>
-                    <p class="benefit-description">Desde refugios de montaña hasta hoteles boutique, garantizamos comodidad en medio de la naturaleza salvaje.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Enfoque Personalizado</h3>
+                    <p>Cada proyecto es único. Adaptamos nuestras soluciones a tus necesidades específicas.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">🦎</div>
-                    <h3 class="benefit-title">Fauna Extraordinaria</h3>
-                    <p class="benefit-description">Pingüinos, ballenas, cóndores y guanacos en su hábitat natural. Observación de vida silvestre en su máxima expresión.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Soporte Post-Lanzamiento</h3>
+                    <p>Te acompañamos después del lanzamiento con soporte técnico y mantenimiento continuo.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌿</div>
-                    <h3 class="benefit-title">Turismo Sostenible</h3>
-                    <p class="benefit-description">Comprometidos con la conservación del ecosistema patagónico y el desarrollo responsable del turismo.</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h3>ROI Garantizado</h3>
+                    <p>Nuestros sitios web están diseñados para generar resultados y hacer crecer tu negocio.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features-section">
+    <section id="ingresos" class="section income-section">
         <div class="container">
-            <h2 class="section-title">Servicios Profesionales</h2>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h3>Guías Especializados</h3>
-                    <p>Expertos locales con certificación internacional y años de experiencia en la región.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h3>Equipamiento Premium</h3>
-                    <p>Material técnico de última generación para garantizar seguridad y comodidad.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h3>Transporte Seguro</h3>
-                    <p>Vehículos 4x4 especializados y transporte aéreo para acceder a lugares remotos.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h3>Soporte 24/7</h3>
-                    <p>Asistencia completa durante toda tu estadía con comunicación satelital.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Años de Experiencia</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">5000+</span>
-                    <span class="stat-label">Viajeros Satisfechos</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Destinos Únicos</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Satisfacción Cliente</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section" id="ingreso">
-        <div class="container">
-            <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Solicita tu Asesoramiento Gratuito</h2>
-            <p style="text-align: center; color: #b0d0ff; font-size: 1.2rem; margin-bottom: 3rem;">
-                Nuestros expertos en Patagonia te ayudarán a diseñar el viaje perfecto
+            <h2 class="section-title">Potencial de Ingresos</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 50px; opacity: 0.9;">
+                Un sitio web profesional puede transformar completamente tus ingresos
             </p>
-            
-            <div class="contact-container">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo *</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono">
-                        </div>
-                        <div class="form-group">
-                            <label for="pais">País de Origen</label>
-                            <input type="text" id="pais" name="pais">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="fechas">Fechas Tentativas de Viaje</label>
-                        <input type="text" id="fechas" name="fechas" placeholder="Ej: Marzo 2025 o Flexible">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="personas">Número de Personas</label>
-                            <select id="personas" name="personas">
-                                <option value="">Seleccionar...</option>
-                                <option value="1">1 persona</option>
-                                <option value="2">2 personas</option>
-                                <option value="3-4">3-4 personas</option>
-                                <option value="5-8">5-8 personas</option>
-                                <option value="9+">Más de 9 personas</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="presupuesto">Presupuesto Aproximado (USD)</label>
-                            <select id="presupuesto" name="presupuesto">
-                                <option value="">Seleccionar...</option>
-                                <option value="1000-2500">$1,000 - $2,500</option>
-                                <option value="2500-5000">$2,500 - $5,000</option>
-                                <option value="5000-10000">$5,000 - $10,000</option>
-                                <option value="10000+">Más de $10,000</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="intereses">Intereses y Actividades Preferidas</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="trekking"> Trekking y Senderismo
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="glaciares"> Glaciares y Hielo
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="fauna"> Observación de Fauna
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="fotografia"> Fotografía de Naturaleza
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="navegacion"> Navegación y Cruceros
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="intereses" value="cultura"> Cultura Local
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje Adicional</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre tus expectativas, experiencia previa, necesidades especiales, etc."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <span>Solicitar Asesoramiento Gratuito</span>
-                        <div class="btn-icon">📧</div>
-                    </button>
-                    
-                    <p class="privacy-text">
-                        Al enviar este formulario, aceptas recibir información sobre nuestros servicios. 
-                        Respetamos tu privacidad y no compartiremos tus datos.
-                    </p>
-                </form>
-                
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">⚡</div>
-                        <h4>Respuesta Rápida</h4>
-                        <p>Te contactaremos en menos de 24 horas con una propuesta personalizada</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">🎯</div>
-                        <h4>Asesoramiento Experto</h4>
-                        <p>Más de 15 años diseñando experiencias únicas en la Patagonia</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">💎</div>
-                        <h4>Sin Compromiso</h4>
-                        <p>Consulta gratuita y sin obligación de compra</p>
-                    </div>
+            <div class="income-grid">
+                <div class="income-card">
+                    <div class="income-amount">+150%</div>
+                    <h3>Aumento en Ventas</h3>
+                    <p>Los clientes que invierten en diseño web profesional ven un incremento promedio del 150% en sus ventas online.</p>
                 </div>
+                <div class="income-card">
+                    <div class="income-amount">$50K-200K</div>
+                    <h3>Ingresos Anuales</h3>
+                    <p>Rango típico de ingresos adicionales que nuestros clientes generan en el primer año tras el lanzamiento.</p>
+                </div>
+                <div class="income-card">
+                    <div class="income-amount">ROI 300%</div>
+                    <h3>Retorno de Inversión</h3>
+                    <p>Por cada peso invertido en desarrollo web profesional, recuperas 3 pesos en el primer año.</p>
+                </div>
+                <div class="income-card">
+                    <div class="income-amount">24/7</div>
+                    <h3>Ventas Automáticas</h3>
+                    <p>Tu sitio web trabaja las 24 horas generando leads y ventas mientras duermes.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 1.1rem; opacity: 0.9;">
+                    <strong>¿Listo para multiplicar tus ingresos?</strong> Un sitio web profesional es la inversión más rentable que puedes hacer para tu negocio.
+                </p>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section id="contacto" class="section contact-section">
         <div class="container">
-            <p style="opacity: 0.7;">© 2025 Patagonia Experiences. Todos los derechos reservados.</p>
+            <h2 class="section-title">Comencemos Tu Proyecto</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">
+                Desde la Patagonia para el mundo. Contáctanos y descubre cómo podemos impulsar tu negocio.
+            </p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 xxxx-xxxx">
+                </div>
+                <div class="form-group">
+                    <label for="proyecto">Cuéntanos sobre tu proyecto</label>
+                    <textarea id="proyecto" name="proyecto" rows="5" placeholder="Describe tu proyecto, objetivos y presupuesto aproximado..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Solicitar Cotización Gratuita</button>
+            </form>
+            <div style="margin-top: 40px; opacity: 0.8;">
+                <p>📧 info@patagoniadiseno.com | 📱 +54 9 xxx-xxx-xxxx</p>
+                <p>📍 Patagonia, Argentina - Servicios en toda Latinoamérica</p>
+            </div>
         </div>
-    </footer>
+    </section>
 
     <script>
-        // Smooth scrolling para el botón de ingreso
-        document.querySelector('.cta-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#ingreso').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
-        // Animación de aparición de las tarjetas al hacer scroll
+        // Form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('¡Gracias por tu interés! Te contactaremos en las próximas 24 horas para discutir tu proyecto.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add subtle animations on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -759,21 +581,18 @@
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        // Observar elementos para animaciones
-        document.querySelectorAll('.benefit-card, .feature-item, .stat-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Parallax sutil en el hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        // Observe all cards and benefit items
+        document.querySelectorAll('.service-card, .benefit-item, .income-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
